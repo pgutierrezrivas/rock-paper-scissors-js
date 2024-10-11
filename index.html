@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel, Tijera, Lagarto, Spock</title>
+    <link rel="stylesheet" href="./static/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 id="title" class="col-12">¡Piedra, Papel, Tijera, Lagarto, Spock!</h1>
+        </div>
+        <div class="row">
+            <div class="box_choices col-md-6">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <form id="form_choices" class="col-8" onsubmit="return game()">
+                        <label for="choice">Elige una opción:</label>
+                        <select id="choice" name="choice">
+                            <option value="piedra" class="piedra">Piedra</option>
+                            <option value="papel" class="papel">Papel</option>
+                            <option value="tijera" class="tijera">Tijera</option>
+                            <option value="lagarto" class="lagarto">Lagarto</option>
+                            <option value="spock" class="spock">Spock</option>
+                        </select>
+                        <button type="submit">Jugar</button>
+                    </form>
+                    <div class="col-2"></div>
+                </div>
+                
+                <div class="box_result">
+                    <p id="user_choice">Tú elegiste: </p>
+                    <p id="computer_choice">La computadora eligió: </p>
+                    <p id="result"></p>
+                </div>
+
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <img id="img_rules" src="./static/rules.png" alt="rules">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./static/script.js"></script>
+</body>
+</html>
